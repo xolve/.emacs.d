@@ -8,12 +8,6 @@
 
 (use-package racer :ensure t)
 
-(use-package lsp-rust :ensure t
-  :after (lsp-mode)
-  :config
-  (setq lsp-rust-rls-command '("rustup" "run" "nightly" "rls")))
-
-
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'rust-mode-hook
           '(lambda ()
