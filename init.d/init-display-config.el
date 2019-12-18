@@ -29,8 +29,8 @@
 ;; theme
 (when (window-system)
   (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-  (use-package zerodark-theme :ensure t)
-  (load-theme 'zerodark t)
+  (use-package material-theme :ensure t)
+  (load-theme 'material t)
 
   (global-hl-line-mode 1)
   (setq tool-bar-border 0)
@@ -75,10 +75,15 @@
     (rainbow-delimiters-mode t)))
 (global-rainbow-delimiters-mode t)
 
-;; (use-package rainbow-identifiers :ensure t
-;;   :hook
-;;   (prog-mode . rainbow-identifiers-mode)
-;; )
-
+(use-package centaur-tabs
+  :demand
+  :config
+  (setq centaur-tabs-set-icons t)
+  (setq centaur-tabs-set-bar 'over)
+  (setq centaur-tabs-set-modified-marker t)
+  (centaur-tabs-mode t)
+  :bind
+  ("C-<prior>" . centaur-tabs-backward)
+  ("C-<next>" . centaur-tabs-forward))
 
 (provide 'init-display-config)
