@@ -35,7 +35,7 @@
 (require 'init-lsp)
 (require 'init-projectile)
 (require 'init-restclient)
-(require 'init-session)
+;(require 'init-session)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
