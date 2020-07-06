@@ -17,6 +17,10 @@
 (setq mark-even-if-inactive t)
 
 
+;; Set default font
+(set-frame-font "JetBrainsMono")
+
+
 ;; Include current buffer name in the title bar
 (setq frame-title-format "%b - emacs")
 
