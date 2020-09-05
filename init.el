@@ -1,9 +1,3 @@
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
-
 (add-to-list 'load-path "~/.emacs.d/init.d")
 (require 'init-package-system)
 
@@ -35,7 +29,7 @@
 (require 'init-lsp)
 (require 'init-projectile)
 (require 'init-restclient)
-;(require 'init-session)
+(require 'init-session)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -45,7 +39,7 @@
  '(delete-selection-mode nil)
  '(package-selected-packages
    (quote
-    (centaur-tabs material-theme lsp-treemacs company-restclient restclient treemacs-projectile treemacs projectile company-lsp lsp-ui tide sbt-mode scala-mode which-key use-package smex rainbow-delimiters racer magit lsp-rust ignoramus highlight-indent-guides general flycheck-rust flx-ido editorconfig company-tern cargo))))
+    (fish-mode lsp-metals centaur-tabs material-theme lsp-treemacs company-restclient restclient treemacs-projectile treemacs projectile company-lsp lsp-ui tide sbt-mode scala-mode which-key use-package smex rainbow-delimiters racer magit lsp-rust ignoramus highlight-indent-guides general flycheck-rust flx-ido editorconfig company-tern cargo))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
