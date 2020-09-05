@@ -6,6 +6,7 @@ history
 recentf
 projectile-bookmarks.eld
 smex-items
+projectile.cache
 
 .cache/
 autosave/
