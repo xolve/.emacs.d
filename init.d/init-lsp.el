@@ -15,4 +15,9 @@
 (use-package lsp-treemacs
   :commands lsp-treemacs-errors-list)
 
+(use-package dap-mode :ensure t
+  :hook
+  (lsp-mode . dap-mode)
+  (lsp-mode . dap-ui-mode))
+
 (provide 'init-lsp)
