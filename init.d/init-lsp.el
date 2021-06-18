@@ -7,11 +7,6 @@
   (setq lsp-ui-doc-position 'bottom)
   :hook (lsp-mode . lsp-ui-mode))
 
-(use-package company-lsp :ensure t
-  :after (lsp-mode company)
-  :config
-  (push 'company-lsp company-backends))
-
 (use-package lsp-treemacs
   :commands lsp-treemacs-errors-list)
 
