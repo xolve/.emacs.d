@@ -1,4 +1,6 @@
-(desktop-save-mode 1)
+;;; init-session.el --- -*- lexical-binding: t -*-
+
+(add-hook 'window-setup-hook (lambda () (desktop-save-mode 1)))
 (setq desktop-dirname             "~/.emacs.d/desktop/"
       desktop-base-file-name      "emacs.desktop"
       desktop-base-lock-name      "lock"

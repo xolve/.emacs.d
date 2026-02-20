@@ -1,21 +1,32 @@
 .directory
 elpa/
 
+# Compiled files
+*.elc
+init.elc
+eln-cache/
+
+# Emacs state/temp files
 ido.last
 history
 recentf
 projectile-bookmarks.eld
 smex-items
 projectile.cache
-
+tramp
+auto-save-list/
 .cache/
 autosave/
-auto-save-list/
 backup/
-desktop/emacs.desktop
-desktop/lock
-rust-playground/
-snippets/
 transient/
 url/
 var/
+
+# Desktop files
+desktop/emacs.desktop
+desktop/lock
+emacs.desktop
+
+# Misc
+rust-playground/
+snippets/

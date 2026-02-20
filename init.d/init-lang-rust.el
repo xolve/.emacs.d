@@ -1,6 +1,7 @@
-(use-package electric :ensure t)
+;;; init-lang-rust.el --- -*- lexical-binding: t -*-
 
-(use-package rust-mode :ensure t)
+(use-package rust-mode :ensure t
+  :hook (rust-mode . electric-pair-mode))
 
 (use-package cargo :ensure t)
 
