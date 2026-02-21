@@ -13,7 +13,7 @@
   (setq smex-prompt-string "smex M-x ")
   (smex-initialize))
 
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 (setq backward-delete-char-untabify-method 'hungry)
 

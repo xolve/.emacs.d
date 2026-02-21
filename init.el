@@ -1,6 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/init.d")
-(require 'init-base)
 (require 'init-package-system)
+(require 'init-base)
 
 ;; Load custom file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
