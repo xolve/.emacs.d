@@ -1,11 +1,10 @@
+;;; init-projectile.el --- -*- lexical-binding: t -*-
+
 (use-package projectile :ensure t
+  :bind-keymap ("M-p" . projectile-command-map)
   :config
   (setq projectile-track-known-projects-automatically nil)
-  )
-
-(projectile-mode)
-
-(define-key projectile-mode-map (kbd "M-p") 'projectile-command-map)
+  (projectile-mode))
 
 (use-package treemacs
   :ensure t

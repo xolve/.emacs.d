@@ -1,3 +1,5 @@
+;;; init-lang-c.el --- -*- lexical-binding: t -*-
+
 (setq c-default-style "linux")
 (setq c-basic-offset 4)
 

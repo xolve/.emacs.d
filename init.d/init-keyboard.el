@@ -1,3 +1,5 @@
+;;; init-keyboard.el --- -*- lexical-binding: t -*-
+
 (setq delete-selection-mode t)
 
 (setq require-final-newline 'query)
@@ -10,13 +12,18 @@
 
 (setq x-select-enable-clipboard t)
 
-(use-package ido :ensure t)
-(use-package flx-ido :ensure t)
-(ido-mode t)
-(flx-ido-mode t)
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(setq ido-use-faces nil)
+(use-package ido :ensure t
+  :defer nil
+  :config
+  (ido-mode t)
+  (setq ido-enable-flex-matching t)
+  (setq ido-everywhere t)
+  (setq ido-use-faces nil))
+
+(use-package flx-ido :ensure t
+  :after ido
+  :config
+  (flx-ido-mode t))
 
 (use-package which-key :ensure t
   :init (which-key-mode)

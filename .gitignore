@@ -27,6 +27,8 @@ desktop/emacs.desktop
 desktop/lock
 emacs.desktop
 
+custom.el
+
 # Misc
 rust-playground/
 snippets/

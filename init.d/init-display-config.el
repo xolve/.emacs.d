@@ -1,3 +1,5 @@
+;;; init-display-config.el --- -*- lexical-binding: t -*-
+
 ;; Do not show startup screen
 (setq inhibit-startup-screen t)
 
@@ -6,9 +8,6 @@
 (setq initial-scratch-message nil)
 (setq initial-major-mode 'fundamental-mode)
 
-
-;; do not show tool-bar
-(tool-bar-mode -1)
 
 (setq column-number-mode t)
 
@@ -68,19 +67,15 @@
   (prog-mode . highlight-indent-guides-mode)
   :config
   (setq highlight-indent-guides-responsive 'stack)
-  (setq highlight-indent-guides-delay 0)
+  (setq highlight-indent-guides-delay 0.1)
   (setq highlight-indent-guides-method 'character)
   )
 
-(use-package rainbow-delimiters :ensure t)
-(define-globalized-minor-mode global-rainbow-delimiters-mode
-  rainbow-delimiters-mode
-  (lambda ()
-    (rainbow-delimiters-mode t)))
-(global-rainbow-delimiters-mode t)
+(use-package rainbow-delimiters :ensure t
+  :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package centaur-tabs
-  :demand
+  :defer t
   :config
   (setq centaur-tabs-set-icons t)
   (setq centaur-tabs-set-bar 'over)

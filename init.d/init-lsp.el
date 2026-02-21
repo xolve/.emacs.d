@@ -1,3 +1,5 @@
+;;; init-lsp.el --- -*- lexical-binding: t -*-
+
 (use-package lsp-mode :ensure t
   :commands lsp)
 
@@ -11,8 +13,6 @@
   :commands lsp-treemacs-errors-list)
 
 (use-package dap-mode :ensure t
-  :hook
-  (lsp-mode . dap-mode)
-  (lsp-mode . dap-ui-mode))
+  :commands (dap-debug dap-breakpoint-toggle))
 
 (provide 'init-lsp)

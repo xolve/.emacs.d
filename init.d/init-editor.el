@@ -1,3 +1,5 @@
+;;; init-editor.el --- -*- lexical-binding: t -*-
+
 (use-package editorconfig
   :ensure t
   :config
@@ -5,14 +7,13 @@
 
 (use-package smex
   :ensure t
+  :bind (("M-x" . smex)
+         ("M-X" . smex-major-mode-commands)
+         ("C-c C-c M-x" . execute-extended-command))
   :config
   (setq smex-history-length 128)
   (setq smex-prompt-string "smex M-x ")
-  (global-set-key (kbd "M-x") 'smex)
-  (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-  ;; This is your old M-x.
-  (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command))
-(smex-initialize)
+  (smex-initialize))
 
 (setq indent-tabs-mode nil)
 

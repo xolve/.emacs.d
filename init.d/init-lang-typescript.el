@@ -1,3 +1,5 @@
+;;; init-lang-typescript.el --- -*- lexical-binding: t -*-
+
 (use-package tide :ensure t)
 (defun setup-tide-mode ()
   (interactive)

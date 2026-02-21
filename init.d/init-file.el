@@ -1,3 +1,5 @@
+;;; init-file.el --- -*- lexical-binding: t -*-
+
 (use-package ignoramus :ensure t)
 (ignoramus-setup)
 
