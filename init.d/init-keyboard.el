@@ -1,6 +1,6 @@
 ;;; init-keyboard.el --- -*- lexical-binding: t -*-
 
-(setq delete-selection-mode t)
+(delete-selection-mode 1)
 
 (define-key global-map (kbd "RET") 'newline-and-indent)
 

@@ -7,8 +7,7 @@
 
 (setq require-final-newline 'query)
 
-(setq coding-system-for-read 'utf-8 )
-(setq coding-system-for-write 'utf-8 )
+(prefer-coding-system 'utf-8)
 
 ;; Manage backup files
 (setq backup-directory-alist '((".*" . "~/.emacs.d/backup")))
@@ -22,20 +21,15 @@
 
 (setq version-control t)
 
-(use-package magit
-  :config
-  (global-git-commit-mode t)
-  )
+(use-package magit)
 
 (setq dired-find-subdir t)
 (put 'dired-find-alternate-file 'disabled nil)
-(add-hook 'dired-mode-hook
-	  (lambda ()
-	    (define-key dired-mode-map (kbd "RET")
-	      (lambda () (interactive) (dired-find-alternate-file)))
-	    (define-key dired-mode-map (kbd "^")
-	      (lambda () (interactive) (find-alternate-file "..")))
-	    ))
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET")
+    (lambda () (interactive) (dired-find-alternate-file)))
+  (define-key dired-mode-map (kbd "^")
+    (lambda () (interactive) (find-alternate-file ".."))))
 (setq dired-auto-revert-buffer t)
 (setq dired-ls-F-marks-symlinks t)
 (setq dired-recursive-copies 'always)

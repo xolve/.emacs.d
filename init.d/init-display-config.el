@@ -9,10 +9,10 @@
 (setq initial-major-mode 'fundamental-mode)
 
 
-(setq column-number-mode t)
+(column-number-mode 1)
 
 
-(setq transient-mark-mode 1)
+(transient-mark-mode 1)
 (setq mark-even-if-inactive t)
 
 
@@ -25,7 +25,7 @@
 
 
 ;; Highlight matching paranthesis
-(setq show-paren-mode t)
+(show-paren-mode 1)
 
 (setq-default line-spacing 1)
 
