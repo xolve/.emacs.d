@@ -1,11 +1,11 @@
 ;;; init-restclient.el --- -*- lexical-binding: t -*-
 
-(use-package restclient :ensure t
+(use-package restclient
   :config
   (setq restclient-inhibit-cookies t)
   )
 
-(use-package company-restclient :ensure t
+(use-package company-restclient
   :config
   (add-to-list 'company-backends 'company-restclient)
   )

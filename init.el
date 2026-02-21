@@ -6,20 +6,6 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 
-(use-package flycheck
-  :ensure t
-  :hook (prog-mode . flycheck-mode))
-
-(use-package company :ensure t
-  :init
-  (setq company-tooltip-align-annotations t)
-  (setq company-minimum-prefix-length 2)
-  :config
-  (setq company-idle-delay 0.2)
-  )
-
-(use-package eldoc :ensure t)
-
 (require 'init-display-config)
 (require 'init-ediff)
 (require 'init-editor)
@@ -36,16 +22,3 @@
 (require 'init-projectile)
 (require 'init-restclient)
 (require 'init-session)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(delete-selection-mode nil)
- '(package-selected-packages nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

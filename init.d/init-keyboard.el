@@ -2,8 +2,6 @@
 
 (setq delete-selection-mode t)
 
-(setq require-final-newline 'query)
-
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 (global-set-key (kbd "<home>") 'move-beginning-of-line)
@@ -12,7 +10,7 @@
 
 (setq x-select-enable-clipboard t)
 
-(use-package ido :ensure t
+(use-package ido
   :defer nil
   :config
   (ido-mode t)
@@ -20,12 +18,12 @@
   (setq ido-everywhere t)
   (setq ido-use-faces nil))
 
-(use-package flx-ido :ensure t
+(use-package flx-ido
   :after ido
   :config
   (flx-ido-mode t))
 
-(use-package which-key :ensure t
+(use-package which-key
   :init (which-key-mode)
   :diminish which-key-mode
   )

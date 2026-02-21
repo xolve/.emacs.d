@@ -1,11 +1,11 @@
 ;;; init-lang-rust.el --- -*- lexical-binding: t -*-
 
-(use-package rust-mode :ensure t
+(use-package rust-mode
   :hook (rust-mode . electric-pair-mode))
 
-(use-package cargo :ensure t)
+(use-package cargo)
 
-(use-package flycheck-rust :ensure t)
+(use-package flycheck-rust)
 
 (setq lsp-rust-server 'rust-analyzer)
 

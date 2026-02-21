@@ -17,6 +17,6 @@
       use-package-always-ensure t
       use-package-expand-minimally t)
 
-(use-package general :ensure t)
+(use-package general)
 
 (provide 'init-package-system)

@@ -1,6 +1,6 @@
 ;;; init-lang-scala.el --- -*- lexical-binding: t -*-
 
-(use-package scala-mode :ensure t
+(use-package scala-mode
   :interpreter
   ("scala" . scala-mode)
   :config
@@ -9,10 +9,10 @@
 
 (add-hook 'scala-mode-hook #'lsp-deferred)
 
-(use-package lsp-metals :ensure t)
+(use-package lsp-metals)
 
 ;; Enable sbt mode for executing sbt commands
-(use-package sbt-mode :ensure t
+(use-package sbt-mode
   :commands sbt-start sbt-command
   :config
   ;; WORKAROUND: https://github.com/ensime/emacs-sbt-mode/issues/31

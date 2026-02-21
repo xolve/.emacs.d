@@ -32,7 +32,7 @@
 ;; theme
 (when (window-system)
   (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-  (use-package material-theme :ensure t)
+  (use-package material-theme)
   (load-theme 'material t)
 
   (global-hl-line-mode 1)
@@ -44,8 +44,7 @@
      'all-the-icons-mode-icon-alist
      '(package-menu-mode all-the-icons-octicon "package" :v-adjust 0.0)))
   
-  (use-package all-the-icons-dired
-    :hook
+  (use-package all-the-icons-dired :hook
     (dired-mode . all-the-icons-dired-mode)))
 
 
@@ -62,7 +61,6 @@
 (setq scroll-preserve-screen-position t) ;; Scroll without moving cursor
 
 (use-package highlight-indent-guides
-  :ensure t
   :hook
   (prog-mode . highlight-indent-guides-mode)
   :config
@@ -71,7 +69,7 @@
   (setq highlight-indent-guides-method 'character)
   )
 
-(use-package rainbow-delimiters :ensure t
+(use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package centaur-tabs

@@ -1,6 +1,6 @@
 ;;; init-file.el --- -*- lexical-binding: t -*-
 
-(use-package ignoramus :ensure t)
+(use-package ignoramus)
 (ignoramus-setup)
 
 (recentf-mode 1)
@@ -22,7 +22,7 @@
 
 (setq version-control t)
 
-(use-package magit :ensure t
+(use-package magit
   :config
   (global-git-commit-mode t)
   )

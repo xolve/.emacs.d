@@ -1,13 +1,12 @@
 ;;; init-projectile.el --- -*- lexical-binding: t -*-
 
-(use-package projectile :ensure t
+(use-package projectile
   :bind-keymap ("M-p" . projectile-command-map)
   :config
   (setq projectile-track-known-projects-automatically nil)
   (projectile-mode))
 
 (use-package treemacs
-  :ensure t
   :defer t
   :init
   (with-eval-after-load 'winum
@@ -64,7 +63,6 @@
         ("C-x t M-t" . treemacs-find-tag)))
 
 (use-package treemacs-projectile
-  :after treemacs projectile
-  :ensure t)
+  :after treemacs projectile)
 
 (provide 'init-projectile)

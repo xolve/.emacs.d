@@ -1,6 +1,6 @@
 ;;; init-lang-typescript.el --- -*- lexical-binding: t -*-
 
-(use-package tide :ensure t)
+(use-package tide)
 (defun setup-tide-mode ()
   (interactive)
   (tide-setup)
@@ -9,9 +9,6 @@
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
   (company-mode +1))
-
-;; aligns annotation to the right hand side
-(setq company-tooltip-align-annotations t)
 
 ;; case insensitive code completion
 (setq tide-completion-ignore-case t)

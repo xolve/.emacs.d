@@ -3,7 +3,6 @@
 ;; Use gcmh to manage GC dynamically — high threshold while
 ;; active, GC runs during idle time.
 (use-package gcmh
-  :ensure t
   :diminish
   :hook (emacs-startup . gcmh-mode)
   :custom
