@@ -21,7 +21,8 @@
 
 (setq version-control t)
 
-(use-package magit)
+(use-package magit
+  :bind ("C-x g" . magit-status))
 
 (setq dired-find-subdir t)
 (put 'dired-find-alternate-file 'disabled nil)

@@ -1,7 +1,14 @@
 ;;; init-lsp.el --- -*- lexical-binding: t -*-
 
 (use-package lsp-mode
-  :commands lsp)
+  :commands lsp
+  :custom
+  (lsp-idle-delay 0.5)
+  (lsp-completion-provider :capf)
+  (lsp-headerline-breadcrumb-enable nil)     ; reduces redisplay work
+)
+
+(setq read-process-output-max (* 1024 1024)) ; 1MB process chunk read
 
 (use-package lsp-ui
   :after lsp-mode

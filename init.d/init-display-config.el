@@ -3,22 +3,21 @@
 ;; Do not show startup screen
 (setq inhibit-startup-screen t)
 
+;; Prevent font-cache GC freezes (especially with icon fonts)
+(setq inhibit-compacting-font-caches t)
 
 ;; Scratch buffer be empty and not contain any text
 (setq initial-scratch-message nil)
 (setq initial-major-mode 'fundamental-mode)
 
-
 (column-number-mode 1)
-
 
 (transient-mark-mode 1)
 (setq mark-even-if-inactive t)
 
 
 ;; Set default font
-(set-frame-font "JetBrainsMono")
-
+(set-frame-font "JetBrainsMono-10")
 
 ;; Include current buffer name in the title bar
 (setq frame-title-format "%b - emacs")
@@ -37,18 +36,21 @@
 
   (global-hl-line-mode 1)
   (setq tool-bar-border 0)
-  
+
   (use-package all-the-icons
     :config
     (add-to-list
      'all-the-icons-mode-icon-alist
      '(package-menu-mode all-the-icons-octicon "package" :v-adjust 0.0)))
-  
+
   (use-package all-the-icons-dired :hook
     (dired-mode . all-the-icons-dired-mode)))
 
 
 (global-display-line-numbers-mode 1)
+
+;; Avoid jitter in line numbers
+(setq-default display-line-numbers-width-start t)
 
 (set-terminal-coding-system 'utf-8)
 
@@ -59,6 +61,10 @@
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-preserve-screen-position t) ;; Scroll without moving cursor
+
+;; Change font size with Ctrl + mouse wheel
+(global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
+(global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
 
 (use-package highlight-indent-guides
   :hook
