@@ -1,3 +1,5 @@
+;;; init.el --- Early Initialization -*- lexical-binding: t -*-
+
 (add-to-list 'load-path "~/.emacs.d/init.d")
 (require 'init-package-system)
 (require 'init-base)
