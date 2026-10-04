@@ -12,6 +12,10 @@
   (gcmh-auto-idle-delay-factor 10)
   (gcmh-high-cons-threshold (* 100 1024 1024)))
 
+;; Do not kill these buffers
+(with-current-buffer "*Messages*" (emacs-lock-mode 'kill))
+(with-current-buffer "*scratch*" (emacs-lock-mode 'kill))
+
 (setq confirm-kill-emacs 'y-or-n-p)
 
 (provide 'init-base)
