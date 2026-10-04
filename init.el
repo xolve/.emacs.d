@@ -8,7 +8,13 @@
 
 ;; Load custom file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file 'noerror)
+(load custom-file 'noerror)\
+
+
+(use-package delsel
+  :ensure nil
+  :config
+  (delete-selection-mode +1))
 
 (require 'init-display-config)
 (require 'init-ediff)
