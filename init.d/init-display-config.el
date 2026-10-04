@@ -29,6 +29,13 @@
 
 (setq-default line-spacing 1)
 
+;; Setup nerd-icons
+;; M-x nerd-icons-install-fonts
+;; Installation path: ~/.local/share/fonts/
+(use-package nerd-icons
+  :custom
+  (nerd-icons-color-icons nil))
+
 ;; theme
 (when (window-system)
   (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
