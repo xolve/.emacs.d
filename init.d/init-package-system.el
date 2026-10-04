@@ -1,4 +1,6 @@
 ;;; init-package-system.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (require 'package)
 (setq package-archives '(("gnu"   . "https://elpa.gnu.org/packages/")
@@ -19,3 +21,4 @@
 (use-package general)
 
 (provide 'init-package-system)
+;;; init-package-system.el ends here

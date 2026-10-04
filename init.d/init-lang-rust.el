@@ -1,4 +1,6 @@
 ;;; init-lang-rust.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package rust-mode
   :hook (rust-mode . electric-pair-mode))
@@ -26,3 +28,4 @@
 (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
 
 (provide 'init-lang-rust)
+;;; init-lang-rust.el ends here

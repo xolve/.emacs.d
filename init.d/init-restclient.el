@@ -1,4 +1,6 @@
 ;;; init-restclient.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package restclient
   :config
@@ -11,3 +13,4 @@
   )
 
 (provide 'init-restclient)
+;;; init-restclient.el ends here

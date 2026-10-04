@@ -1,4 +1,6 @@
 ;;; init-file.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package ignoramus)
 (ignoramus-setup)
@@ -38,3 +40,4 @@
       (concat dired-listing-switches " -alhF --group-directories-first -v"))
 
 (provide 'init-file)
+;;; init-file.el ends here

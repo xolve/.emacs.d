@@ -1,4 +1,6 @@
 ;;; init-lsp.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package lsp-mode
   :commands lsp
@@ -23,3 +25,4 @@
   :commands (dap-debug dap-breakpoint-toggle))
 
 (provide 'init-lsp)
+;;; init-lsp.el ends here

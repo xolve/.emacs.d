@@ -1,4 +1,6 @@
 ;;; init-keyboard.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (delete-selection-mode 1)
 
@@ -45,3 +47,4 @@ With argument, do this that many times."
 
 
 (provide 'init-keyboard)
+;;; init-keyboard.el ends here

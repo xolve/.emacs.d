@@ -1,4 +1,6 @@
 ;;; early-init.el --- Early Initialization -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 ;; Defer garbage collection during startup for better performance
 (setq gc-cons-threshold most-positive-fixnum)

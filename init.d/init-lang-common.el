@@ -1,4 +1,6 @@
 ;;; init-lang-common.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (add-hook 'prog-mode-hook 'subword-mode)
 
@@ -18,3 +20,4 @@
 (use-package eldoc)
 
 (provide 'init-lang-common)
+;;; init-lang-common.el ends here

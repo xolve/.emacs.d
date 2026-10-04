@@ -1,4 +1,6 @@
 ;;; init-lang-scala.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package scala-mode
   :interpreter
@@ -27,3 +29,4 @@
 )
 
 (provide 'init-lang-scala)
+;;; init-lang-scala.el ends here

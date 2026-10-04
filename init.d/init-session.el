@@ -1,4 +1,6 @@
 ;;; init-session.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (add-hook 'window-setup-hook (lambda () (desktop-save-mode 1)))
 (setq desktop-dirname             "~/.emacs.d/desktop/"
@@ -32,3 +34,4 @@
 
 
 (provide 'init-session)
+;;; init-session.el ends here

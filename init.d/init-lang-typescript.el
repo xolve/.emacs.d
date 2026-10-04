@@ -1,4 +1,6 @@
 ;;; init-lang-typescript.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package tide)
 (defun setup-tide-mode ()
@@ -21,3 +23,4 @@
 (setq typescript-indent-level 2)
 
 (provide 'init-lang-typescript)
+;;; init-lang-typescript.el ends here

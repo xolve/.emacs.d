@@ -1,4 +1,6 @@
 ;;; init-editor.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package editorconfig
   :config
@@ -18,3 +20,4 @@
 (setq backward-delete-char-untabify-method 'hungry)
 
 (provide 'init-editor)
+;;; init-editor.el ends here

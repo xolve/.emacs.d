@@ -1,4 +1,6 @@
 ;;; init-base.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 ;; Use gcmh to manage GC dynamically — high threshold while
 ;; active, GC runs during idle time.
@@ -13,3 +15,4 @@
 (setq confirm-kill-emacs 'y-or-n-p)
 
 (provide 'init-base)
+;;; init-base.el ends here

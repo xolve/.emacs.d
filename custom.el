@@ -1,4 +1,5 @@
 ;;; custom.el --- Set by custom -*- lexical-binding: t -*-
+;;; Commentary:
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -1,4 +1,6 @@
 ;;; init-display-config.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 ;; Do not show startup screen
 (setq inhibit-startup-screen t)
@@ -21,7 +23,6 @@
 
 ;; Include current buffer name in the title bar
 (setq frame-title-format "%b - emacs")
-
 
 ;; Highlight matching paranthesis
 (show-paren-mode 1)
@@ -90,3 +91,4 @@
   ("C-<next>" . centaur-tabs-forward))
 
 (provide 'init-display-config)
+;;; init-display-config.el ends here

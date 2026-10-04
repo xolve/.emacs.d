@@ -1,4 +1,6 @@
 ;;; init-projectile.el --- -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package projectile
   :bind-keymap ("M-p" . projectile-command-map)
@@ -66,3 +68,4 @@
   :after treemacs projectile)
 
 (provide 'init-projectile)
+;;; init-projectile.el ends here
